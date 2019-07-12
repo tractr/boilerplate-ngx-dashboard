@@ -1,8 +1,8 @@
 {
 	"version": "1",
 	"validatorPath": "hapify/validator.js",
-	"name": "Angular Admin",
-	"description": "Dashboard for admins built with HapiJS v17",
+	"name": "Angular Dashboard",
+	"description": "Dashboard for admins built with Angular 7",
 	"logo": "https://angular.io/generated/images/marketing/concept-icons/forms.png",
 	"project": "5c993c0f74e4650010e6f683",
 	"templates": [

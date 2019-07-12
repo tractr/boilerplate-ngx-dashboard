@@ -1,7 +1,7 @@
 // Static words
 let _output = {
 	'error_dismiss-action': 'Ok',
-	'header_app-name': 'Hapify - Admin dashboard',
+	'header_app-name': 'Hapify - Dashboard',
 	'header_app-short-name': 'Hapify',
 	'header_action-logout': 'Logout',
 	'footer_tag-line': '© {{year}} - Tractr',
@@ -27,15 +27,6 @@ let _output = {
 	common_max: 'Maximum',
 	'common_error-required': 'This field is required',
 	'common_error-format': 'Wrong format',
-	'image_library-search_name-placeholder': 'Name',
-	'image_library-sort-placeholder': 'Sort',
-	'image_library-sort_values-created_at-desc': 'Creation: descendant',
-	'image_library-sort_values-created_at-asc': 'Creation: ascendant',
-	'image_library-sort_values-name-desc': 'Name: descendant',
-	'image_library-sort_values-name-asc': 'Name: ascendant',
-	'image_library-cancel': 'Cancel',
-	'image_library-validate': 'Validate',
-	'image_library-no_images_found': 'No images found',
 	'common_error-min': 'This field need to be greater than {{ min }}',
 	'common_error-max': 'This field need to be lower than {{ max }}.',
 	'common_error-duplicate':
