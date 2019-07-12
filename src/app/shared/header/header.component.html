@@ -1,0 +1,25 @@
+<header class="container-fluid">
+	<div class="row">
+		<div class="col-12 d-flex justify-content-between align-items-center">
+			<div class="d-flex align-items-center">
+				<img class="h-100 w-auto mr-2" [src]="logo" />
+				<strong class="mr-2">{{
+					'header_app-name' | translate
+				}}</strong>
+			</div>
+			<div class="d-flex align-items-center">
+				<a
+					*ngFor="let item of navigation"
+					[routerLink]="[item.link]"
+					routerLinkActive="active"
+					routerLink="/home"
+					class="mr-3"
+					>Home</a
+				>
+				<a (click)="logout()">
+					<i nz-icon nzType="poweroff" nzTheme="outline"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</header>

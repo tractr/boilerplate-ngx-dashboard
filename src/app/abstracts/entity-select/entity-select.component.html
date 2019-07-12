@@ -1,0 +1,59 @@
+<div *ngIf="formGroup && controlName" [formGroup]="formGroup">
+	<nz-select
+		[nzPlaceHolder]="placeholder"
+		[formControlName]="controlName"
+		[(ngModel)]="model"
+		[nzMode]="multiple ? 'multiple' : 'default'"
+		(ngModelChange)="onChange()"
+		(nzOpenChange)="onOpened($event)"
+		[compareWith]="compareEntities"
+		[nzShowSearch]="filterEnabled"
+		[nzAllowClear]="nullable"
+		(nzOnSearch)="onFilterChanged($event)"
+		(nzScrollToBottom)="loadMore()"
+		[nzServerSearch]="true"
+		[nzLoading]="loading"
+		class="w-100"
+	>
+		<nz-option *ngIf="loading" nzDisabled nzCustomContent>
+			<i nz-icon type="loading" class="loading-icon"></i>
+		</nz-option>
+		<nz-option *ngIf="!loading && !items.length" nzDisabled nzCustomContent>
+			<nz-empty [nzNotFoundContent]="emptyLabel"></nz-empty>
+		</nz-option>
+		<nz-option
+			*ngFor="let item of items"
+			[nzValue]="item"
+			[nzLabel]="item.getLabel()"
+		></nz-option>
+	</nz-select>
+</div>
+<div *ngIf="!(formGroup && controlName)">
+	<nz-select
+		[nzPlaceHolder]="placeholder"
+		[(ngModel)]="model"
+		[nzMode]="multiple ? 'multiple' : 'default'"
+		(ngModelChange)="onChange()"
+		(nzOpenChange)="onOpened($event)"
+		[compareWith]="compareEntities"
+		[nzShowSearch]="filterEnabled"
+		[nzAllowClear]="nullable"
+		(nzOnSearch)="onFilterChanged($event)"
+		(nzScrollToBottom)="loadMore()"
+		[nzServerSearch]="true"
+		[nzLoading]="loading"
+		class="w-100"
+	>
+		<nz-option *ngIf="loading" nzDisabled nzCustomContent>
+			<i nz-icon type="loading" class="loading-icon"></i>
+		</nz-option>
+		<nz-option *ngIf="!loading && !items.length" nzDisabled nzCustomContent>
+			<nz-empty [nzNotFoundContent]="emptyLabel"></nz-empty>
+		</nz-option>
+		<nz-option
+			*ngFor="let item of items"
+			[nzValue]="item"
+			[nzLabel]="item.getLabel()"
+		></nz-option>
+	</nz-select>
+</div>
