@@ -6,7 +6,6 @@ export interface BaseModelSearchParamsInterface {
 	_limit?: string | number;
 	_sort?: string;
 	_order?: string;
-	_populate?: string[];
 }
 
 /** Manage model search params */
@@ -45,6 +44,6 @@ export abstract class BaseModelSearchParams<
 	 * @return {string[]}
 	 */
 	protected allowedKeys(): string[] {
-		return ['_page', '_limit', '_sort', '_order', '_populate'];
+		return ['_page', '_limit', '_sort', '_order'];
 	}
 }

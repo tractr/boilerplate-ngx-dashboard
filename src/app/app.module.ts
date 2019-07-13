@@ -7,15 +7,7 @@ import { StaticModule } from '@app/static';
 import { SessionModule } from '@app/session';
 import { ModelsModule } from '@app/models';
 import { IsAdminGuard, IsLoggedGuard, IsNotLoggedGuard } from '@app/guards';
-import {
-	ErrorService,
-	SessionService,
-	S3Service,
-	GeocoderService,
-	PasswordService,
-	EmailConfirmationService,
-	EncodeHttpParamsInterceptor
-} from '@app/services';
+import { ErrorService, SessionService } from '@app/services';
 
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -23,7 +15,7 @@ import { environment } from '@env/environment';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { TranslateModuleLoad } from './translate-import';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { MetaModule } from '@ngx-meta/core';
 import { FooterComponent } from '@app/shared/footer/footer.component';
 import { HeaderComponent } from '@app/shared/header/header.component';
@@ -51,16 +43,7 @@ import { HeaderComponent } from '@app/shared/header/header.component';
 		IsLoggedGuard,
 		IsNotLoggedGuard,
 		SessionService,
-		S3Service,
-		GeocoderService,
-		PasswordService,
-		ErrorService,
-		EmailConfirmationService,
-		{
-			provide: HTTP_INTERCEPTORS,
-			useClass: EncodeHttpParamsInterceptor,
-			multi: true
-		}
+		ErrorService
 	],
 	bootstrap: [AppComponent]
 })
