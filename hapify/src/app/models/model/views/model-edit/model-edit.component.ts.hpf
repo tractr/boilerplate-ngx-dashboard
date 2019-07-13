@@ -33,7 +33,7 @@ export class <<M AA>>EditComponent implements OnInit, OnDestroy {
   ngOnInit() {
     // Get the <<M a>> after reading the id
     this.idSubscription = this.route.params.subscribe(params => {
-      this.<<M aA>>Service.get(params['id'], { _populate: ['*'] })
+      this.<<M aA>>Service.get(params['id'])
         .then((<<M aA>>: <<M AA>>) => {
           this.<<M aA>> = <<M aA>>;
         })

@@ -20,10 +20,6 @@ interface BaseModelCountResultInterface {
 	total: number;
 }
 
-interface BaseReadQueryInterface {
-	_populate?: string[];
-}
-
 @Injectable()
 export abstract class BaseModelService<
 	T extends BaseModel<BaseModelInterface>,
@@ -36,15 +32,11 @@ export abstract class BaseModelService<
 	/**
 	 * Create a new model
 	 * @param {I} payload
-	 * @param {BaseReadQueryInterface} query
 	 * @return {Promise<T>}
 	 */
-	create(payload: I, query: BaseReadQueryInterface = {}): Promise<T> {
+	create(payload: I): Promise<T> {
 		// Start request
-		const options = {
-			withCredentials: true,
-			params: query as {}
-		};
+		const options = { withCredentials: true };
 		return this.http
 			.post(`${this.uri()}`, payload, options)
 			.toPromise()
@@ -66,15 +58,11 @@ export abstract class BaseModelService<
 	/**
 	 * Get an model from it's id
 	 * @param {string} id
-	 * @param {BaseReadQueryInterface} query
 	 * @return {Promise<T>}
 	 */
-	get(id: string, query: BaseReadQueryInterface = {}): Promise<T> {
+	get(id: string): Promise<T> {
 		// Start request
-		const options = {
-			withCredentials: true,
-			params: query as {}
-		};
+		const options = { withCredentials: true };
 		return this.http
 			.get(`${this.uri()}/${id}`, options)
 			.toPromise()

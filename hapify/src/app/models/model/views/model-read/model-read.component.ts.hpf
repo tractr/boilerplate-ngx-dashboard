@@ -48,7 +48,7 @@ export class <<M AA>>ReadComponent implements OnInit, OnDestroy {
   ngOnInit() {
     // Get the <<M a>> after reading the id
     this.idSubscription = this.route.params.subscribe(params => {
-      this.<<M aA>>Service.get(params['id'], { _populate: ['*'] })
+      this.<<M aA>>Service.get(params['id'])
         .then((<<M aA>>: <<M AA>>) => {
           if (typeof this.<<M aA>> === 'undefined') {
             this.<<M aA>> = new <<M AA>>();

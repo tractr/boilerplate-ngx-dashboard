@@ -1,7 +1,6 @@
 export const environment = {
 	production: true,
-	languages: ['en'],
-	appName: 'Hapify',
+	appName: 'Ngx Dashboard',
 	login: {
 		redirection: ['']
 	},
@@ -9,11 +8,7 @@ export const environment = {
 		redirection: ['session', 'sign-in']
 	},
 	api: {
-		uri: 'https://api.bootstrapr.net/v1',
+    uri: 'https://api.example.com',
 		adminPath: '/admin'
-	},
-	images: {
-		uri:
-			'https://images.bootstrapr.net/resize?nocrop=true&url=https://bts-files-production-u67438.s3.amazonaws.com'
 	}
 };

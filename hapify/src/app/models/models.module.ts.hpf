@@ -2,7 +2,6 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {SharedModule} from '@app/shared';
 import {TranslateModuleLoad} from '@app/translate-import';
-import {FileDropModule} from 'ngx-file-drop';
 
 import {ModelsRoutingModule} from './models-routing.module';
 <<@ M m>>
@@ -25,8 +24,7 @@ import {<<m AA>>ListComponent} from './<<m a-a>>/views/<<m a-a>>-list/<<m a-a>>-
     CommonModule,
     SharedModule,
     TranslateModuleLoad(),
-    ModelsRoutingModule,
-    FileDropModule
+    ModelsRoutingModule
   ],
   declarations: [
 <<@ M m>>

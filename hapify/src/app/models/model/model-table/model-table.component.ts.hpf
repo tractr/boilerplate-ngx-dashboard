@@ -27,14 +27,6 @@ export class <<M AA>>TableComponent extends EntityTableComponent< <<M AA>>, <<M 
   /** @inheritDoc */
   protected refresh(): void {
     const params = this.searchParams.toObject();
-<<? F tE*em/hd>>
-    // Force relation population
-    params._populate = [
-    <<@ F tE*em/hd f>>
-        '<<f a_a>>',
-    <<@>>
-    ];
-<<?>>
 
     // Set refreshing flag
     this.refreshing = true;
