@@ -1,11 +1,8 @@
 import { Injectable } from '@angular/core';
 import { environment } from '@env/environment';
 import { HttpClient } from '@angular/common/http';
-import {
-	BaseModel,
-	BaseModelInterface,
-	BaseModelSearchParamsInterface
-} from '@app/abstracts';
+import { BaseModel, BaseModelInterface } from './base-model';
+import { BaseModelSearchParamsInterface } from './base-model-search-params';
 
 /** Interface for listings result */
 interface BaseModelSearchResultInterface<T> {

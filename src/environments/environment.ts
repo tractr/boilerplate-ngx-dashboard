@@ -8,7 +8,7 @@ export const environment = {
 		redirection: ['session', 'sign-in']
 	},
 	api: {
-    uri: 'http://localhost:3000',
+		uri: 'http://localhost:3000',
 		adminPath: '/admin'
 	}
 };
