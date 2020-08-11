@@ -41,7 +41,7 @@
 		"nl2br-pipe": "^1.1.0",
 		"rxjs": "^6.4.0",
 		"rxjs-compat": "^6.4.0",
-		"tinymce": "^4.8.2",
+		"tinymce": "^4.9.11",
 		"zone.js": "^0.8.29"
 	},
 	"devDependencies": {
