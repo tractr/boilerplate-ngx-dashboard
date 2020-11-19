@@ -1,30 +1,30 @@
-<hpf-<<M a-a>>-details
-    *ngIf="<<M aA>>"
-    [<<M aA>>]="<<M aA>>"
-    (delete)="onDelete()"></hpf-<<M a-a>>-details>
-<div *ngIf="!<<M aA>>" class="my-5 text-center">
+<hpf-<<Model kebab>>-details
+    *ngIf="<<Model camel>>"
+    [<<Model camel>>]="<<Model camel>>"
+    (delete)="onDelete()"></hpf-<<Model kebab>>-details>
+<div *ngIf="!<<Model camel>>" class="my-5 text-center">
     <nz-spin nzSimple></nz-spin>
 </div>
-<<? R>>
+<<if ReferencedIn>>
 <div class="container">
-    <<@ R m>>
-        <<@ m.f se f>>
+    <<for ReferencedIn m>>
+        <<for m.f searchable f>>
     <div class="row">
         <div class="py-4 pb-5 col-12">
             <div class="py-3 text-center">
                 <h4>
-                    <a [routerLink]="['/<<m a-a>>']" [queryParams]="{ <<f a_a>> : <<M aA>> ? <<M aA>>.getId() : '' }">
-                        {{ '<<M a_a>>_<<m a_a>>-as-<<f a_a>>' | translate }}
+                    <a [routerLink]="['/<<m kebab>>']" [queryParams]="{ <<f snake>> : <<Model camel>> ? <<Model camel>>.getId() : '' }">
+                        {{ '<<Model snake>>_<<m snake>>-as-<<f snake>>' | translate }}
                     </a>
                 </h4>
             </div>
-            <hpf-<<m a-a>>-table
-                [searchParams]="<<m aA>>As<<f AA>>SearchParams"
-                (select)="onSelect<<m AA>>As<<f AA>>($event)">
-            </hpf-<<m a-a>>-table>
+            <hpf-<<m kebab>>-table
+                [searchParams]="<<m camel>>As<<f pascal>>SearchParams"
+                (select)="onSelect<<m pascal>>As<<f pascal>>($event)">
+            </hpf-<<m kebab>>-table>
         </div>
     </div>
-        <<@>>
-    <<@>>
+        <<endfor>>
+    <<endfor>>
 </div>
-<<?>>
+<<endif>>
